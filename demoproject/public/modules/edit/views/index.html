@@ -1,0 +1,90 @@
+
+<link href="stylesheets\settings.css" rel="stylesheet">
+
+<div class="side">
+    
+ <ul>
+     <li>
+<a href="" ng-click="settings1()" style=" font-size: 20px;">General</a>        
+
+     </li>
+     <li>
+     <a href="" ng-click="settings()" style=" font-size: 20px;">Password</a>
+     </li>
+    </ul>
+
+   
+    
+    <div class="content">
+        
+           <form class="form-inline" name="userFormnew"ng-show="setting" enctype="multipart/form-data"  ng-submit="submitForm()" ng-init="init()">
+            
+           
+           <label> Name: </label>
+          <input type="text" id="name" name="firstname" class="form-control" placeholder="Firstname" ng-model="user.firstname" ng-disabled="df" style="width:800px;" required><button type="button" ng-click="editf()">Edit</button><br>
+               <label>Lastname:</label><input type="text" id="name" style="width:800px;" name="lastname" class="form-control" placeholder="Lastname" ng-model="user.lastname" ng-disabled="dl" ><br><button type="button"  ng-click="editl()">Edit</button><br>
+          
+               <label>Email:</label>
+          <input type="email" id="mail" name="email" style="width:800px;" class="form-control" placeholder="email address" ng-model="user.email" ng-disabled="de" required><br><button type="button" ng-click="edite()">Edit</button>
+            <p ng-show="userFormnew.email.$invalid && !userFormnew.email.$pristine"  style="color:#990000;font-weight:bold;">Enter a valid email.</p>       
+               
+               <label>pic:</label>
+               
+        <img ng-src="{{user_pic}}" class="avatar img-circle img-thumbnail" alt="avatar" style="width:200px;height:200px;align:left;display:block;">
+   
+          <input type="file" id="image" style="width:800px;padding-left:4.5cm;padding-top:0.5cm;"  file-model="myFile"  accept="image/*"><br>
+           
+               
+               
+             <br> <br><br><br><br> <br><button type="submit" ng-disabled="userFormnew.$invalid" >Save</button>
+        </form>    
+    
+        
+        
+            <form class="form-inline" name="userFormnew2" ng-hide="setting" enctype="multipart/form-data"  ng-submit="submitForm2()" >
+            
+           
+           <label> Old Password: </label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Old password" ng-model="user.oldpassword" style="width:800px;" required>
+               <label>New Password:</label><input type="password" id="password" style="width:800px;" name="newpassword" class="form-control" placeholder="New password" ng-model="user.newpassword" >
+          
+               <label>Retype new password:</label>
+          <input type="password" id="password" name="new1password" style="width:800px;" class="form-control" placeholder="Newpassword" ng-model="user.new1password" required>
+            <p ng-show="userFormnew.email.$invalid && !userFormnew.email.$pristine"  style="color:#990000;font-weight:bold;">Enter a valid email.</p>       
+        
+               
+               
+             <br> <br><br><br><br> <br><button type="submit" ng-disabled="userFormnew.$invalid" style="position: fixed;">Save</button>
+        </form> 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    </div>
+   
+    
+</div>
+
+ 

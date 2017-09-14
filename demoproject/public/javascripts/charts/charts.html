@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.css"> -->
+
+</head>
+<body>
+<div ng-controller="DoughnutCtrl">
+<canvas id="bar" class="charts chart-bar"
+  chart-data="data" chart-labels="labels" chart-series="series" chart-colors="colors"> 
+</canvas>
+</div>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>  
+ <script src="Chart.min.js"></script>
+ <script src="angular-chart.min.js"></script>
+ <script type="text/javascript">
+
+angular.module("app", ["chart.js"]).controller("DoughnutCtrl", function ($scope) {
+  $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  $scope.series = ['Series A'];
+  $scope.data =  [90, 150, 250, 350, 450, 550, 650];
+  $scope.colors = ["#2E7D32","#0288D1","#5E35B1","#9E9D24","#FF6F00","#DD2C00","#263238"];
+    
+});
+ </script>
+</body>
+</html>
+

@@ -1,0 +1,126 @@
+
+
+<link rel="stylesheet" href="stylesheets/dashboardtable.css">
+<table ng-init="init()" ng-show="ts" style="position:relative;">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th colspan="2">Email</th>
+      
+    </tr>
+       <tr>
+      <td><strong><input type="text" ng-model="fil.firstname" style="width:100%;"></strong></td>
+      <td><input type="text" ng-model="fil.lastname" style="width:100%;"></td>
+      <td colspan="2" ><input type="text" ng-model="fil.email" style="width:100%;"></td>
+    </tr>
+  </thead>
+  <tbody>
+   
+  <tr dir-paginate="b in user | filter:fil | itemsPerPage: 10" >
+      <td><strong>{{b.firstname}}</strong></td>
+      <td>{{b.lastname}}</td>
+      <td>{{b.email}}</td>
+      <td ng-click="setSelected(b.id)"><a ui-sref="booking">Book</a></td>
+  
+    </tr>
+     
+   
+  </tbody>
+</table>
+
+<div ng-hide="ts" >
+    
+    <div ng-hide="list">
+        <button type="button" ng-click="rqstudnts()">All Requests</button>
+<table  style="position:relative;">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th >Email</th>
+      
+    </tr>
+       <tr>
+      <td><strong><input type="text" ng-model="fil.firstname" style="width:100%;"></strong></td>
+      <td><input type="text" ng-model="fil.lastname" style="width:100%;"></td>
+      <td><input type="text" ng-model="fil.email" style="width:100%;"></td>
+    </tr>
+  </thead>
+  <tbody>
+   
+  <tr dir-paginate="b in user | filter:fil | itemsPerPage: 10" >
+      <td><strong>{{b.firstname}}</strong></td>
+      <td>{{b.lastname}}</td>
+      <td>{{b.email}}</td>
+     
+    </tr>
+     
+   
+  </tbody>
+</table>
+    </div>
+</div>
+<div ng-show="list"  >
+     <button type="button" ng-click="dshbrd()">Back</button>
+    <button type="button" ng-click="listallreq()">All requests</button>
+    <button type="button" ng-click="acpt()">Accepted requests</button>
+    <button type="button" ng-click="decl()">Declined requests</button>
+<table  style="position:relative;"  ng-show="listall">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th >Date</th>
+      <th>Accept</th>
+      <th >Decline</th>
+    </tr>
+ 
+  </thead>
+  <tbody>
+   
+  <tr dir-paginate="b in students | filter:fil | itemsPerPage: 10" >
+      <td><strong>{{b.firstname}}</strong></td>
+       <td><strong>{{b.lastname}}</strong></td>
+         <td><strong>{{b.date| date : "MMM d, y h:mm:ss a"}}</strong></td>
+     <td><strong>
+       <a href="" ng-click="setstatus(b.student_id,b.date,2)">
+          <span class="glyphicon glyphicon-ok" style="color: #66ff1a;"></span>
+         </a></strong></td>
+       <td><strong>
+       <a href="" ng-click="setstatus(b.student_id,b.date,3)">
+          <span class="glyphicon glyphicon-remove" style="color:#660000;"></span>
+         </a></strong></td>
+    </tr>
+  </tbody>
+</table>
+    <table  style="position:relative;" ng-show="acptpage" >
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th >Date</th>
+    </tr>
+ 
+  </thead>
+  <tbody>
+   
+  <tr dir-paginate="b in students | filter:fil | itemsPerPage: 10" >
+      <td><strong>{{b.firstname}}</strong></td>
+       <td><strong>{{b.lastname}}</strong></td>
+         <td><strong>{{b.date| date : "MMM d, y h:mm:ss a"}}</strong></td>
+    
+    </tr>
+     
+   
+  </tbody>
+</table>
+    
+
+</div>
+
+
+
+
+<dir-pagination-controls max-size=5 direction-links="true" boundary-links="true" template-url="dirPagination.html"></dir-pagination-controls> 
+

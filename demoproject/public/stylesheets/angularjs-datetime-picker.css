@@ -1,0 +1,86 @@
+.angularjs-datetime-picker {
+  color: #000;
+  font: normal 13px sans-serif;
+  border: 1px solid #ecf4ff;
+  display: inline-block;
+  background: #ecf4ff;
+  z-index: 999;
+}
+.angularjs-datetime-picker > .adp-month {
+  text-align: center;
+  line-height: 25px;  
+  background: rgba(0, 0, 0, 0) linear-gradient(#e2efff, #d3e7ff) repeat scroll 0 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  border: 1px solid #a4bed4;
+  position: relative;
+}
+.angularjs-datetime-picker > .adp-month > button {
+  color: #555;
+  font: normal 14px sans-serif;
+  outline: none;
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.angularjs-datetime-picker > .adp-month > button:hover {
+  color: #333;
+}
+.angularjs-datetime-picker > .adp-month > button.adp-prev {
+  left: 10px;
+  top:4px;
+}
+.angularjs-datetime-picker > .adp-month > button.adp-next {
+  right: 10px;
+  top:4px;
+}
+.angularjs-datetime-picker > .adp-days {
+  width: 212px; /* 30 x 7 */
+  border:1px solid#a4bed4;
+  text-align: center;
+}
+.angularjs-datetime-picker > .adp-days > .adp-day-of-week, .angularjs-datetime-picker > .adp-days > .adp-day {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #ffffff;
+  width: 30px;
+  line-height: 24px;
+  float: left;  
+  color: black;
+  font-size: 10px;
+}
+.angularjs-datetime-picker > .adp-days > .adp-day-of-week {
+  font-weight: bold;
+}
+.angularjs-datetime-picker > .adp-days > .adp-day:not(.selectable) {
+  opacity: 0.30;
+  cursor: default;
+}
+.angularjs-datetime-picker > .adp-days > .adp-day.selectable  {
+  cursor: pointer;
+}
+.angularjs-datetime-picker > .adp-days > .adp-day.selected { background: #b5deff; border-color: #a1ceed;}
+.angularjs-datetime-picker > .adp-days > .adp-day.selectable:hover { background: #b5deff; }
+.angularjs-datetime-picker > .adp-days:after { content: '';display: block;clear: left;height: 0;}
+.angularjs-datetime-picker input[type=range] { width: 150px; }
+.hourLabel {  float: left; width: 45px; margin-bottom: 0; font-weight: normal;}
+.minutesLabel { float: left;  width: 50px; font-weight: normal; }
+.timeLabel { padding-top: 10px; }
+.adp-day-of-week {
+  -moz-user-select: text;
+    background: #ecf4ff none repeat scroll 0 0;
+    border-bottom: 1px solid #a4bed4 !important;
+    border-right: 1px solid #a4bed4 !important;
+    display: block;
+    font-size: 11px;
+    color: #333 !important;
+    line-height: 10px;
+    margin: 0;
+    overflow: hidden;
+    padding-bottom: 1px;
+    position: relative;
+    line-height: 23px !important;
+   
+  }  

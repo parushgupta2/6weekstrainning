@@ -1,0 +1,268 @@
+/*##########--gallery--###########*/
+
+.gallery {
+    list-style-type: none;
+    margin: 0 10px;
+    padding: 0;
+}
+.gallery::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.gallery > li {
+    cursor: pointer;
+    float: left;
+    height: 140px;
+    margin: 15px 20px 0 15px;
+    position: relative;
+}
+.gallery > li > a {
+    display: block;
+    height: 70%;
+}
+.gallery  img {
+    height: 70%;
+}
+.gallery > li:hover .extras {
+    display: block;
+    border-radius: 4px;
+}
+.gallery > li .extras {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    display: none;
+    height: 70%;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.gallery > li .tags {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    display: block;
+    height: auto;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-align: right;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.gallery > li .tags a {
+    color: #fff;
+
+}
+.gallery > li .tags a:last-child {
+    margin-right: 10px;
+}
+.gallery > li .extras::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.gallery > li .extras .extras-inner {
+    display: inline-block;
+    height: auto;
+    position: relative;
+    vertical-align: middle;
+    width: 90%;
+}
+.gallery > li .extras .extras-inner a {
+    color: #bbb;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+
+}
+/*.gallery > li .extras .extras-inner a:hover {
+    background: #666 none repeat scroll 0 0;
+    color: #fff;
+}*/
+.extras .extras-inner a i {
+    color: #fff;
+    font-size: 30px;
+    width: 100%;
+
+    
+}
+    
+
+.image-gallery .modal-header {
+    background: #f1f4f6 none repeat scroll 0 0;
+    border-radius: 3px 3px 0 0;
+    color: #333;
+    text-align: center;
+}
+.modal-header {
+  background: #f1f4f6 none repeat scroll 0 0;
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 16.4286px;
+    padding: 5px;
+}
+.modal-header .close {
+    color: #828383;
+    font-size: 25px;
+    font-weight: normal;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.icon-edit::before {
+    content: "";
+}
+.extras-inner {
+    display: inline-block;
+    height: auto;
+    position: relative;
+    vertical-align: middle;
+    width: 90%;
+
+}
+
+.gallery li a {
+    height: 100px;
+    width: 100px;
+}
+
+a [class^="icon-"], a [class*=" icon-"] {
+    display: inline;
+}
+[class^="icon-"], [class*=" icon-"] {
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: repeat;
+    display: inline;
+    height: auto;
+    line-height: normal;
+    margin-top: 0;
+    vertical-align: baseline;
+    width: auto;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+.icon-plus::before {
+    content: "";
+}
+[class^="icon-"]::before, [class*=" icon-"]::before {
+    display: inline-block;
+    text-decoration: inherit;
+}
+#main .box.box-bordered.box-color .box-title {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+ .box-title h3, .modal-header h3{
+    margin: 0;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+/*.box .box-title::after {
+    clear: both;
+    content: "";
+    display: table;
+}*/
+
+.box .box-title {
+    border-bottom: 1px solid #ddd;
+    margin-top: 0;
+}
+
+/*=======image  src gallery hover=========*/
+
+/* ============================================================
+  GLOBAL
+============================================================ */
+.effects {
+  padding-left: 15px;
+}
+.effects .img123456789 {
+  position: relative;
+  float: left;
+  margin-bottom: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+.effects .img123456789:nth-child(n) {
+  margin-right: 5px;
+}
+.effects .img123456789:first-child {
+  margin-left: -15px;
+}
+.effects .img123456789:last-child {
+  margin-right: 0;
+}
+.effects .img123456789 img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+
+a.expand {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  font-weight: 700;
+  font-size:22px;
+}
+
+#hover-effect .overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+
+}
+#hover-effect .overlay a.expand {
+    left: -10px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+}
+#hover-effect .img123456789.hover .overlay {
+  width:40px;
+  height:40px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.fa .fa-crop{
+  font-size: 14px;
+}

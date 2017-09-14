@@ -1,0 +1,71 @@
+ <div class="container" ng-init="init()">
+  <h1 class="page-header" style="margin-right:800px;">{{teacher.firstname}}</h1>
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="text-center">
+        <img ng-src="{{teacher.filename}}" class="avatar img-circle img-thumbnail" alt="avatar" style="width:200px;height:200px;">
+      </div>
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+      <div class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">First name:</label>
+          <div class="col-lg-8">
+              <p class="form-control" >{{teacher.firstname}}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Last name:</label>
+          <div class="col-lg-8">
+             <p class="form-control" >{{teacher.lastname}}</p>
+          </div>
+        </div>
+       
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+            <p class="form-control" >{{teacher.email}}</p>
+          </div>
+        </div>
+    
+            <div class="form-group">
+          <label class="col-lg-3 control-label">Subjects</label>
+          <div class="col-lg-8">
+            <div class="ui-select">
+              <select id="user_time_zone" class="form-control">
+                <option value="Hawaii">hindi</option>
+                <option value="Alaska">math</option>
+                
+              </select>
+            </div>
+          </div>
+        </div>
+          <div class="form-group">
+          <label class="col-lg-3 control-label">Booking date and time:</label>
+          <div class="col-lg-8" style="width:35%">
+              <div class="input-group">
+              <p class="form-control" style="width:100%" >{{model}}</p>
+                  <div datetime-picker ng-model="model"  class="input-group-addon">
+             
+          <i datetime-picker ng-model="model"  class="glyphicon glyphicon-calendar"></i> 
+        
+                  </div>
+              </div>
+          </div>
+        </div>
+          
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <input class="btn btn-primary" value="Confirm" type="button" style="background-color: #4CAF50;" ng-click="setSelected()">
+             <input class="btn btn-primary" value="Cancel" type="button" ui-sref="dashboard" >
+              
+<!--              <a ui-sref="dashboard">Cancel</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.side{
+    text-align: center;
+    margin-left: 0px;
+    height:590px;
+    width:150px;
+    background-color:gray;
+}
+.content{
+    width:1000px;
+    margin-left:200px;
+    margin-top:0px;
+}
+
+a{
+    padding: 10px;
+    display: block;
+     width: 150px;
+    color: white;
+  
+     
+    
+}
+
+li{
+     list-style-position:inside;
+    color: white;
+   padding: 0;
+    width: 150px;
+    height: auto;
+   
+/*     border: 2px solid black;*/
+}
+
+li a:hover{
+    background-color:darkslategray;
+    
+}
+
+input {
+  display: inline-block;
+  float: left;
+}
+
+label{
+    
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 120px;
+    text-align: left;
+    
+}

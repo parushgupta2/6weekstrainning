@@ -1,0 +1,42 @@
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <link rel="stylesheet" href="stylesheets/signup.css">
+
+   
+              
+       <form name="userFormnew" enctype="multipart/form-data"  ng-submit="submitForm()" ng-init="chkuser()">
+              <h1>Sign Up</h1> 
+           
+              <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="firstname" placeholder="Firstname" ng-model="user.firstname" required >
+            <input type="text" id="name" name="lastname" placeholder="Lastname" ng-model="user.lastname" >
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="email"placeholder="email address" ng-model="user.email" >
+            <p ng-show="userFormnew.email.$invalid && !userFormnew.email.$pristine"  style="color:#990000;font-weight:bold;" required>Enter a valid email.</p>       
+        
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" placeholder="Password" ng-model="user.password" required >
+                
+        <label>Image:</label>
+          <input  type="file" id="file" file-model="myFile;" name="image" accept="image/*" >
+
+                  
+           </fieldset> 
+           <fieldset>
+          <legend><span class="number">2</span>Professional Details</legend>
+
+           <label>Register as a:</label>
+                <input type="radio" name="type" value="student" ng-model="user.type" style="display:inline" ng-required="!type">
+                Student<br>
+                <input type="radio" name="type" value="teacher" ng-model="user.type"style="display:inline" ng-required="!type" >
+                Teacher<br>
+              </fieldset>
+          
+              <button type="submit" ng-disabled="$userFormnew.invalid">Sign Up</button><br><br><br>
+                                                                                          </form>
+
+ 

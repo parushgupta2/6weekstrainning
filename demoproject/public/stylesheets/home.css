@@ -1,0 +1,10 @@
+.ngdialog-content { width: 960px !important; }
+.homecontainer h1 { padding-bottom: 15px; padding-top: 0px; font-size: 21px;}
+.homecontainer .wt-frame { padding: 15px 20px !important; }
+.homecontainer .heading { font-size: 14px; }
+.homecontainer label { font-size: 13px; }
+.homecontainer .aud-con { font-size: 13px; }
+.homecontainer .include { font-size: 13px; }
+.homecontainer .exclude {font-size: 13px;}
+.homecontainer .aud-info > li { min-height: 40px; font-size: 13px;}
+.ngdialog.ngdialog-theme-default { padding-top: 80px !important; }
